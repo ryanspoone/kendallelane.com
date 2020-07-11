@@ -1,8 +1,10 @@
-import _ from 'lodash';
-import express from 'express';
+'use strict';
+
+const _ = require('lodash');
+const express = require('express');
 const router = express.Router();
 
-import { getDataById } from './helpers';
+const { getData } = require('./helpers');
 
 router.post('/', async (req, res) => {
     const { id } = req.body;
@@ -10,7 +12,7 @@ router.post('/', async (req, res) => {
         if (_.isEmpty(id)) {
             throw new Error('No ID passed in.');
         }
-        res.status(200).json(await getDataById({ id }));
+        res.status(200).json(await getData({ id }));
     } catch (error) {
         return res.status(500).send({ error: _.get(error, 'message', error) });
     }
@@ -22,10 +24,10 @@ router.get('/:id', async (req, res) => {
         if (_.isEmpty(id)) {
             throw new Error('No ID passed in.');
         }
-        res.status(200).json(await getDataById({ id }));
+        res.status(200).json(await getData({ id }));
     } catch (error) {
         return res.status(500).send({ error: _.get(error, 'message', error) });
     }
 });
 
-export default router;
+module.exports = router;

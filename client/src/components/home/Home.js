@@ -35,7 +35,7 @@ export default class Home extends Component {
     }
 
     async getUnprotectedData() {
-        const response = await fetch('/api/unprotected', {
+        const response = await fetch('/api/dribbble', {
             headers: {
                 Accept: 'application/json',
                 'Content-Type': 'application/json'
