@@ -9,7 +9,7 @@
         "server": "babel-node server/start.js",
         "client": "babel-node client/start.js",
         "start": "concurrently \"npm run server\" \"npm run client\"",
-        "install-all": "npm install && npm run install-server && npm install build-client",
+        "install-all": "npm install && npm run install-server && npm run build-client",
         "install-server": "cd server && npm install",
         "install-client": "cd client && npm install && npm run build"
     },
