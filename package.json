@@ -1,5 +1,5 @@
 {
-    "name": "fullstack-template",
+    "name": "kendallelane.com",
     "version": "1.0.0",
     "description": "",
     "main": "server/index.js",
@@ -23,7 +23,7 @@
         ]
     },
     "type": "module",
-    "author": "Ryan Spoone",
+    "author": "Kendall Lane",
     "license": "UNLICENSED",
     "dependencies": {
         "babel-cli": "^6.26.0",
