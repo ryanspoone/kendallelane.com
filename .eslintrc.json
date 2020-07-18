@@ -6,9 +6,16 @@
         "plugin:flowtype/recommended",
         "prettier"
     ],
-    "plugins": ["prettier", "react", "import", "flowtype"],
+    "plugins": [
+        "prettier",
+        "react",
+        "import",
+        "flowtype"
+    ],
     "rules": {
-        "prettier/prettier": ["error"],
+        "prettier/prettier": [
+            "error"
+        ],
         "valid-jsdoc": [
             "error",
             {
@@ -71,7 +78,10 @@
         "linkComponents": [
             // Components used as alternatives to <a> for linking, eg. <Link to={ url } />
             "Hyperlink",
-            { "name": "Link", "linkAttribute": "to" }
+            {
+                "name": "Link",
+                "linkAttribute": "to"
+            }
         ]
     }
 }

@@ -7,24 +7,16 @@ const router = express.Router();
 const { getData } = require('./helpers');
 
 router.post('/', async (req, res) => {
-    const { id } = req.body;
     try {
-        if (_.isEmpty(id)) {
-            throw new Error('No ID passed in.');
-        }
-        res.status(200).json(await getData({ id }));
+        res.status(200).json(await getData(req.body));
     } catch (error) {
         return res.status(500).send({ error: _.get(error, 'message', error) });
     }
 });
 
-router.get('/:id', async (req, res) => {
-    const { id } = req.params;
+router.get('/', async (req, res) => {
     try {
-        if (_.isEmpty(id)) {
-            throw new Error('No ID passed in.');
-        }
-        res.status(200).json(await getData({ id }));
+        res.status(200).json(await getData(req.params));
     } catch (error) {
         return res.status(500).send({ error: _.get(error, 'message', error) });
     }

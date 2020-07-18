@@ -1,26 +1,24 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import { get, isEmpty, isString } from 'lodash';
 import fetch from 'isomorphic-fetch';
-import { client } from '../../Client';
 
-import UnprotectedData from '../home/UnprotectedData';
+import DribbbleShots from './Dribbble';
 
 export default class Home extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            unprotectedData: undefined,
-            isUnprotectedDataLoading: true,
-            unprotectedDataError: undefined,
+            dribbbleShots: undefined,
+            areDribbbleShotsLoading: true,
+            dribbbleShotsError: undefined,
             globalError: undefined
         };
     }
 
     componentDidMount() {
         try {
-            this.getUnprotectedData();
+            this.getDribbbleShots();
         } catch (err) {
             let error = get(err, 'message') || get(err, 'error', err);
             console.error('Thrown error from server:', error);
@@ -34,28 +32,27 @@ export default class Home extends Component {
         }
     }
 
-    async getUnprotectedData() {
+    async getDribbbleShots() {
         const response = await fetch('/api/dribbble', {
             headers: {
                 Accept: 'application/json',
                 'Content-Type': 'application/json'
             },
-            method: 'POST',
-            body: JSON.stringify({ id: 'SOME_UNPROTECTED_ID' })
+            method: 'POST'
         });
-        const unprotectedData = await response.json();
+        const dribbbleShots = await response.json();
         if (response.status !== 200) {
-            const error = get(unprotectedData, 'error', unprotectedData);
+            const error = get(dribbbleShots, 'error', dribbbleShots);
             this.setState({
-                unprotectedDataError: error,
-                unprotectedData: undefined,
-                isUnprotectedDataLoading: false
+                dribbbleShotsError: error,
+                dribbbleShots: undefined,
+                areDribbbleShotsLoading: false
             });
         } else {
             this.setState({
-                unprotectedData,
-                unprotectedDataError: undefined,
-                isUnprotectedDataLoading: false
+                dribbbleShots,
+                dribbbleShotsError: undefined,
+                areDribbbleShotsLoading: false
             });
         }
     }
@@ -74,32 +71,16 @@ export default class Home extends Component {
             );
         }
         return (
-            <div className="container">
-                <h1>Home</h1>
-                <p className="lead">This page is unprotected.</p>
-                <div className="lead">
-                    <UnprotectedData
-                        data={get(this.state, 'unprotectedData')}
-                        error={get(this.state, 'unprotectedDataError')}
-                        isLoading={get(this.state, 'isUnprotectedDataLoading')}
-                    />
+            <main role="main" className="">
+                <div className="page intro">
+                    <img className="img-fluid mx-auto d-block" alt="intro" src="/images/about-me.gif" />
                 </div>
-                {client.isLoggedIn ? (
-                    <div className="lead">
-                        <div>Check out the protected page:</div>
-                        <Link className="btn btn-primary btn-lg" to="/welcome">
-                            Welcome
-                        </Link>
-                    </div>
-                ) : (
-                    <div className="lead">
-                        <div>Login to check out the protected page:</div>
-                        <Link className="btn btn-primary btn-lg" to="/login">
-                            Login
-                        </Link>
-                    </div>
-                )}
-            </div>
+                <DribbbleShots
+                    dribbbleShots={get(this.state, 'dribbbleShots')}
+                    error={get(this.state, 'dribbbleShotsError')}
+                    isLoading={get(this.state, 'areDribbbleShotsLoading')}
+                />
+            </main>
         );
     }
 }

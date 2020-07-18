@@ -4,10 +4,8 @@ import { Route, Redirect, Switch } from 'react-router-dom';
 import { get } from 'lodash';
 
 import TopBar from './TopBar';
-import PrivateRoute from './PrivateRoute';
-import Login from './Login';
-import Logout from './Logout';
-import Welcome from './welcome/Welcome';
+import Footer from './Footer';
+import Info from './info/Info';
 import Home from './home/Home';
 
 class NoMatch extends Component {
@@ -30,20 +28,19 @@ class NoMatch extends Component {
 }
 
 const App = () => (
-    <div className="container">
+    <div className="app">
         <TopBar />
 
         <Switch>
-            <PrivateRoute path="/welcome" component={Welcome} />
-
-            <Route path="/login" component={Login} />
-            <Route path="/logout" component={Logout} />
+            <Route path="/info" component={Info} />
             <Route path="/home" component={Home} />
 
             <Route exact path="/" render={() => <Redirect to="/home" component={Home} />} />
 
             <Route component={NoMatch} />
         </Switch>
+
+        <Footer />
     </div>
 );
 

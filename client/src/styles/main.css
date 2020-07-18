@@ -1,6 +1,4 @@
-/**
- * General app styling
- */
+/* General app styling */
 
 .bd-placeholder-img {
     font-size: 1.125rem;
@@ -17,6 +15,155 @@
     }
 }
 
+/* Globals */
+
+body {
+    min-height: 100vh;
+    /* padding-top: 4.5rem; */
+    font-family: 'Oswald', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+}
+
 main {
+    width: 100%;
+    /* padding-top: 25px; */
+    min-height: 50vh;
+}
+
+strong,
+b,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+}
+
+footer {
+    padding-top: 25px;
+    padding-top: 4em;
+    padding-left: 12px;
+    padding-left: 2em;
+    padding-right: 12px;
+    padding-right: 2em;
+    padding-bottom: 12px;
+    padding-bottom: 2em;
+}
+
+/* Base structure */
+
+html,
+body {
+    height: 100%;
+    background-color: #ddd;
+}
+
+/* Links */
+
+a.underline {
+    text-decoration: underline;
+}
+
+/* Custom default button */
+
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+    color: #333;
+    text-shadow: none;
+    /* Prevent inheritance from `body` */
+    background-color: #fff;
+    border: 0.05rem solid #fff;
+}
+
+/* Cover */
+
+.cover {
+    padding: 0 1.5rem;
+}
+
+.cover .btn-lg {
+    padding: 0.75rem 1.25rem;
+}
+
+/* Top nav bar */
+
+.topnav {
+    display: inline;
+    font-size: 28px;
+    font-weight: 700;
+    text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+}
+
+.topnav a.active {
+    color: rgba(0, 0, 0, 1) !important;
+}
+
+.page {
+    min-height: 100%;
+    min-height: 100vh;
+}
+
+.page.intro {
+    background-color: khaki;
+    display: block;
+    width: 100%;
+    position: relative;
+    height: 0;
+    overflow: hidden;
+}
+
+.page.intro img {
+    position: absolute;
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 8rem;
+    margin: auto;
+}
+
+@media only screen and (max-width: 768px) {
+    .page.intro img {
+        padding: 4rem;
+    }
+}
+
+.section {
+    padding-top: 5em;
+}
+
+.shots {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+}
+
+.shot img,
+.shot video {
+    max-width: 100%;
+    -webkit-transition: all 2s;
+    transition: all 2s;
+}
+
+.shot .figure {
+    cursor: pointer;
+}
+.shot .figure > .embed-responsive {
+    min-width: 50vw;
+}
+
+.paragraph {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.carousel-item {
     width: 100%;
 }
