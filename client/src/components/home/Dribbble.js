@@ -88,11 +88,9 @@ class Carousel extends Component {
                 <div className="carousel slide" id={carouselId}>
                     <ol className="carousel-indicators">
                         <li data-target={carouselIdRef} data-slide-to="0" className="active"></li>
-                        <li data-target={carouselIdRef} data-slide-to="1"></li>
                     </ol>
                     <div className="carousel-inner" role="listbox">
                         <VidSlide url={video} index={0} />
-                        <ImgSlide url={image} index={1} />
                     </div>
                     <a href={carouselIdRef} className="left carousel-control" data-slide="prev">
                         <span className="icon-prev"></span>
@@ -220,7 +218,7 @@ class DribbleShot extends Component {
                     aria-labelledby={title}
                     aria-hidden="true"
                 >
-                    <div className="modal-dialog modal-xl" role="document">
+                    <div className="modal-dialog modal-md" role="document">
                         <div className="modal-content bg-white">
                             <div className="modal-header">
                                 <strong className="modal-title">{title}</strong>

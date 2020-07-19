@@ -158,6 +158,11 @@ a.underline {
 .shot .figure > .embed-responsive {
     min-width: 50vw;
 }
+@media only screen and (max-width: 768px) {
+    .shot .figure > .embed-responsive {
+        min-width: 100vw;
+    }
+}
 
 .paragraph {
     margin-top: 0;
