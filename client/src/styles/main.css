@@ -9,12 +9,6 @@
     user-select: none;
 }
 
-@media (min-width: 768px) {
-    .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-    }
-}
-
 /* Globals */
 
 body {
@@ -129,12 +123,6 @@ a.underline {
     margin: auto;
 }
 
-@media only screen and (max-width: 768px) {
-    .page.intro img {
-        padding: 4rem;
-    }
-}
-
 .section {
     padding-top: 5em;
 }
@@ -147,21 +135,30 @@ a.underline {
 
 .shot img,
 .shot video {
+    vertical-align: middle;
     max-width: 100%;
+    min-width: 100%;
     -webkit-transition: all 2s;
     transition: all 2s;
+}
+
+.shot .figure > .embed-responsive {
+    min-width: 20rem;
 }
 
 .shot .figure {
     cursor: pointer;
 }
-.shot .figure > .embed-responsive {
-    min-width: 50vw;
-}
-@media only screen and (max-width: 768px) {
-    .shot .figure > .embed-responsive {
-        min-width: 100vw;
-    }
+/* .shot .figure > .embed-responsive {
+    min-width: 55vw;
+} */
+
+.embed-responsive .embed-responsive-item,
+.embed-responsive embed,
+.embed-responsive iframe,
+.embed-responsive object,
+.embed-responsive video {
+    height: auto;
 }
 
 .paragraph {
@@ -178,4 +175,35 @@ a.underline {
     height: 0.625rem;
     cursor: pointer;
     border-radius: 50%;
+}
+
+/* Phone */
+@media (max-width: 480px) {
+}
+
+/* Tablet */
+@media (min-width: 481px) and (max-width: 768px) {
+}
+@media (max-width: 768px) {
+    .page.intro img {
+        padding: 4rem;
+    }
+}
+@media (min-width: 481px) {
+    .shot .figure > .embed-responsive {
+        min-width: 25rem;
+    }
+}
+
+/* Laptop */
+@media (min-width: 769px) and (max-width: 1024px) {
+}
+@media (min-width: 769px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
+
+/* Desktops */
+@media (min-width: 1025px) and (max-width: 3200px) {
 }

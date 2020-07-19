@@ -14,7 +14,7 @@ class VidSlide extends Component {
         }
         return (
             <div className={className}>
-                <div className="embed-responsive embed-responsive-16by9">
+                <div className="embed-responsive embed-responsive-4by3">
                     <video autoPlay loop muted playsInline className="embed-responsive-item">
                         <source src={this.props.url} />
                         Your browser does not support HTML5 video tag.
@@ -132,7 +132,7 @@ class Featured extends Component {
         if (video) {
             return (
                 <figure className="figure">
-                    <div className="embed-responsive embed-responsive-16by9">
+                    <div className="embed-responsive embed-responsive-4by3">
                         <video
                             className="embed-responsive-item"
                             data-toggle="modal"
