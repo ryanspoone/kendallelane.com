@@ -15,7 +15,7 @@ class VidSlide extends Component {
         return (
             <div className={className}>
                 <div className="embed-responsive embed-responsive-16by9">
-                    <video autoPlay loop muted className="embed-responsive-item">
+                    <video autoPlay loop muted playsInline className="embed-responsive-item">
                         <source src={this.props.url} />
                         Your browser does not support HTML5 video tag.
                     </video>
@@ -164,6 +164,7 @@ class Featured extends Component {
                             autoPlay
                             loop
                             muted
+                            playsInline
                             poster={image}
                             alt={`${title} preview`}
                         >
