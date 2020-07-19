@@ -16,7 +16,7 @@ class VidSlide extends Component {
             <div className={className}>
                 <div className="embed-responsive embed-responsive-16by9">
                     <video autoPlay loop muted className="embed-responsive-item">
-                        <source src={this.props.url} type="video/webm" />
+                        <source src={this.props.url} />
                         Your browser does not support HTML5 video tag.
                     </video>
                 </div>
@@ -167,7 +167,7 @@ class Featured extends Component {
                             poster={image}
                             alt={`${title} preview`}
                         >
-                            <source src={video} type="video/webm" />
+                            <source src={video} />
                             <img
                                 className="img-fluid"
                                 data-toggle="modal"

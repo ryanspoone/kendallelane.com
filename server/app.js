@@ -22,15 +22,15 @@ app.use((req, res, next) => {
     next();
 });
 
-app.get('/', (req, res) => {
-    res.send('KendallELane.com');
-});
-app.get('/api', function(req, res) {
+const indexRouter = express.Router();
+indexRouter.get('/', function(req, res) {
     res.send('KendallELane.com API is running');
 });
 
 const dribbbleRoutes = require('./routes/dribbble');
 
-app.use('/api/dribbble', dribbbleRoutes);
+indexRouter.use('/dribbble', dribbbleRoutes);
+
+app.use(process.env.SERVER_ROUTE, indexRouter);
 
 module.exports = app;
