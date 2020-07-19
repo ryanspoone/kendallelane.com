@@ -84,22 +84,7 @@ class Carousel extends Component {
                 </div>
             );
         } else if (video) {
-            return (
-                <div className="carousel slide" id={carouselId}>
-                    <ol className="carousel-indicators">
-                        <li data-target={carouselIdRef} data-slide-to="0" className="active"></li>
-                    </ol>
-                    <div className="carousel-inner" role="listbox">
-                        <VidSlide url={video} index={0} />
-                    </div>
-                    <a href={carouselIdRef} className="left carousel-control" data-slide="prev">
-                        <span className="icon-prev"></span>
-                    </a>
-                    <a href={carouselIdRef} className="right carousel-control" data-slide="next">
-                        <span className="icon-next"></span>
-                    </a>
-                </div>
-            );
+            return <VidSlide url={video} index={0} />;
         } else if (!isEmpty(attachments)) {
             return (
                 <div className="carousel slide" id={carouselId}>
@@ -130,13 +115,7 @@ class Carousel extends Component {
                 </div>
             );
         } else {
-            return (
-                <div className="carousel slide" id={carouselId}>
-                    <div className="carousel-inner" role="listbox">
-                        <ImgSlide url={image} index={0} />
-                    </div>
-                </div>
-            );
+            return <ImgSlide url={image} index={0} />;
         }
     }
 }
