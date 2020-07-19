@@ -8,9 +8,9 @@ const Footer = () => (
                 <p>Kendall Lane is... For freelane enquiries, please get in touch.</p>
                 <div>
                     <div>
-                        <Link className="text-dark underline" to="mailto:kendall3lane@gmail.com">
-                            kendall3lane@gmail.com
-                        </Link>
+                        <a className="text-dark underline" href="mailto:kendall3lane@gmail.com">
+                            Email
+                        </a>
                     </div>
                     <div>
                         <Link to="#" className="text-dark underline">
