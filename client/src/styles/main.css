@@ -172,3 +172,10 @@ a.underline {
 .carousel-item {
     width: 100%;
 }
+
+.carousel .carousel-indicators li {
+    width: 0.625rem;
+    height: 0.625rem;
+    cursor: pointer;
+    border-radius: 50%;
+}
