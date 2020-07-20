@@ -1,11 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const Footer = () => (
     <footer className="mastfoot mt-auto">
         <div className="row">
             <div className="col-md-4 text-justify">
-                <p>Kendall Lane is... For freelane enquiries, please get in touch.</p>
+                <p>Kendall Lane is... For freelance enquiries, please get in touch.</p>
                 <div>
                     <div>
                         <a className="text-dark underline" href="mailto:kendall3lane@gmail.com">
@@ -13,14 +12,24 @@ const Footer = () => (
                         </a>
                     </div>
                     <div>
-                        <Link to="#" className="text-dark underline">
+                        <a
+                            href="https://www.linkedin.com/in/kendall-lane-a4542a111/"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="text-dark underline"
+                        >
                             LinkedIn
-                        </Link>
+                        </a>
                     </div>
                     <div>
-                        <Link to="#" className="text-dark underline">
+                        <a
+                            href="https://www.instagram.com/kendallelane/"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="text-dark underline"
+                        >
                             Instagram
-                        </Link>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -28,18 +37,24 @@ const Footer = () => (
                 <strong>Selected Clients</strong>
                 <div>IBM</div>
                 <div>Apple</div>
+                <div>Company3</div>
             </div>
             <div className="col-md-4">
                 <strong>Features</strong>
                 <div>
-                    <Link to="#" className="text-dark underline">
+                    <a href="#" className="text-dark underline">
                         Link1
-                    </Link>
+                    </a>
                 </div>
                 <div>
-                    <Link to="#" className="text-dark underline">
+                    <a href="#" className="text-dark underline">
                         Link2
-                    </Link>
+                    </a>
+                </div>
+                <div>
+                    <a href="#" className="text-dark underline">
+                        Link3
+                    </a>
                 </div>
             </div>
         </div>

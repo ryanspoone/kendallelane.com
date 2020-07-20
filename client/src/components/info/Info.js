@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 
 export default class Info extends Component {
     render() {
@@ -36,9 +35,9 @@ export default class Info extends Component {
                         </p>
                         <p>
                             For freelance enquiries please get in{' '}
-                            <Link className="text-dark underline" to="mailto:kendall3lane@gmail.com">
+                            <a className="text-dark underline" href="mailto:kendall3lane@gmail.com">
                                 touch
-                            </Link>
+                            </a>
                             .
                         </p>
                         <div className="paragraph">
@@ -46,31 +45,51 @@ export default class Info extends Component {
                         </div>
                         <div className="paragraph">
                             <div>
-                                <Link className="text-dark underline" to="mailto:kendall3lane@gmail.com">
-                                    kendall3lane@gmail.com
-                                </Link>
+                                <a className="text-dark underline" href="mailto:kendall3lane@gmail.com">
+                                    Email
+                                </a>
                             </div>
                             <div>
-                                <Link to="#" className="text-dark underline">
+                                <a
+                                    href="https://www.instagram.com/kendallelane/"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="text-dark underline"
+                                >
                                     Instagram
-                                </Link>
+                                </a>
                             </div>
                             <div>
-                                <Link to="#" className="text-dark underline">
+                                <a
+                                    href="https://www.linkedin.com/in/kendall-lane-a4542a111/"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="text-dark underline"
+                                >
                                     LinkedIn
-                                </Link>
+                                </a>
                             </div>
                         </div>
                         <div className="paragraph">
                             <div>
-                                <Link to="#" className="text-dark underline">
+                                <a
+                                    href="https://kendall3lane.dribbble.com/"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="text-dark underline"
+                                >
                                     Dribbble
-                                </Link>
+                                </a>
                             </div>
                             <div>
-                                <Link to="#" className="text-dark underline">
+                                <a
+                                    href="https://www.behance.net/kendall3lane/moodboards"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="text-dark underline"
+                                >
                                     Behance
-                                </Link>
+                                </a>
                             </div>
                         </div>
                     </div>
