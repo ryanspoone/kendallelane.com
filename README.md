@@ -45,6 +45,13 @@ cd kendallelane.com/
 npm run install-all
 ```
 
+Create a `.env` file in the root of this repository and add the following:
+
+```text
+ACCESS_TOKEN="YOUR_DRIBBBLE_ACCESS_TOKEN_HERE"
+SERVER_ROUTE='/'
+```
+
 Setup PM2 to run the server:
 
 ```bash
