@@ -15,7 +15,7 @@ const Footer = () => (
                         <a
                             href="https://www.linkedin.com/in/kendall-lane-a4542a111/"
                             target="_blank"
-                            rel="noreferrer"
+                            rel="noopener noreferrer"
                             className="text-dark underline"
                         >
                             LinkedIn
@@ -25,7 +25,7 @@ const Footer = () => (
                         <a
                             href="https://www.instagram.com/kendallelane/"
                             target="_blank"
-                            rel="noreferrer"
+                            rel="noopener noreferrer"
                             className="text-dark underline"
                         >
                             Instagram

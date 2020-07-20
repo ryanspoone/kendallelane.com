@@ -53,7 +53,7 @@ export default class Info extends Component {
                                 <a
                                     href="https://www.instagram.com/kendallelane/"
                                     target="_blank"
-                                    rel="noreferrer"
+                                    rel="noopener noreferrer"
                                     className="text-dark underline"
                                 >
                                     Instagram
@@ -63,7 +63,7 @@ export default class Info extends Component {
                                 <a
                                     href="https://www.linkedin.com/in/kendall-lane-a4542a111/"
                                     target="_blank"
-                                    rel="noreferrer"
+                                    rel="noopener noreferrer"
                                     className="text-dark underline"
                                 >
                                     LinkedIn
@@ -75,7 +75,7 @@ export default class Info extends Component {
                                 <a
                                     href="https://kendall3lane.dribbble.com/"
                                     target="_blank"
-                                    rel="noreferrer"
+                                    rel="noopener noreferrer"
                                     className="text-dark underline"
                                 >
                                     Dribbble
@@ -85,7 +85,7 @@ export default class Info extends Component {
                                 <a
                                     href="https://www.behance.net/kendall3lane/moodboards"
                                     target="_blank"
-                                    rel="noreferrer"
+                                    rel="noopener noreferrer"
                                     className="text-dark underline"
                                 >
                                     Behance
