@@ -1,6 +1,12 @@
 # KendallELane.com
 
-Preview KendallELane.com at [http://167.172.124.211/info](http://167.172.124.211/info).
+## Goals
+
+This is a side project between a few friends. This repo is imperfect due to it being used to teach full stack development and should not be used as production ready code. Eventually, once incremental development is complete, it will replace the current [kendallelane.com](https://www.kendallelane.com/) portfolio.
+
+## Preview
+
+Preview this build at [https://test.ryanspoone.com](https://test.ryanspoone.com).
 
 ## Getting Started Locally
 
