@@ -5,7 +5,8 @@ const fetch = require('isomorphic-fetch');
 const the = require('await-the');
 const momentUTC = require('moment').utc;
 
-let cachedShots = [];
+const MAX_PAGES = 25; // Avoid possible infinite loops
+let cachedShots = []; // Store shots in-memory to speed up render time
 let lastSyncDate = momentUTC(-1).toISOString(); // -1 is epoch
 
 const getCachedShots = async () => {
@@ -31,8 +32,9 @@ const getAllShots = async () => {
     let allShots = [];
     let done = false;
     let count = 1;
-    await the.while(
+    await the.whileMax(
         () => !done,
+        MAX_PAGES,
         async () => {
             const response = await fetch(`https://api.dribbble.com/v2/user/shots?page=${count}`, {
                 headers: {
